@@ -111,7 +111,7 @@ class Humano {
         this.edad = edad
         this.email = email
     }
-    // Este metodo tambien lo puedo poner privado
+    // Este metodo tambien lo puedo poner privado, por defecto es public
     getEdad(){
         return `La edad es ${this.edad}`
     }
