@@ -107,7 +107,7 @@ const juntarInfo = async () => {
 	// console.log(infoDeHoteles);
 	// const obj: any = {};
 	for(let i = 0; i < 150; i++){  // console.log(Object.keys(hotels.name).length) = 150;
-		const obj: {[key:string]: string | number} =  {};
+		const obj: {[key: string]: string | number} =  {};
 		for(const categoria in hotels){
 			obj[categoria] = hotels[categoria as keyof Hotels][i];
 		}
