@@ -1,6 +1,4 @@
-// FUNCIONES
-
-
+// Funciones
 // le puedo decir que tipado retorna
 function suma ( a:number, b:number ): number {
 	return a + b;
@@ -16,12 +14,30 @@ function tiraError(msg: string): never {
 	throw new Error(msg);
 }
 
-// Se le puede tmb pasar un parametro opcional
-function saludar(nombre: string, apellido: string, edad?: number): string{
-	return `Hola ${nombre} ${apellido} tienes ${edad ? edad : "X"} años`;
+// Se le puede tmb pasar un parametro opcional y uno que tiene un valor por defecto si no le paso nada
+function saludar(nombre: string, apellido: string, edad?: number , hobby = "Leer"): string{
+	return `Hola ${nombre} ${apellido} tienes ${edad ? edad : "X"} años, y tu hobby es ${hobby}`;
 }
 
-console.log(saludar("Mauricio", "Corzo"));
+console.log(saludar("Mauricio", "Corzo")); //Hola Mauricio Corzo tienes X años, y tu hobby es Leer
+console.log(saludar("Mauricio", "Corzo", 27 , "Comer"));// Hola Mauricio Corzo tienes X años, y tu hobby es Comer
+
+// Parametros REST, cuando no se sabe la cantidad de parametros pero igual se puede tipar
+const addAllNumbers = (firstNumber: number, ...restOfNumbers: number[]): number => {
+	let total: number =  firstNumber;
+	for(let counter = 0; counter < restOfNumbers.length; counter++) {
+		if(isNaN(restOfNumbers[counter])){
+			continue;
+		}
+		total += Number(restOfNumbers[counter]);
+	}
+	return total;
+};
+
+addAllNumbers(1, 2, 3, 4, 5, 6, 7);  // returns 28
+addAllNumbers(2);                    // returns 2
+// addAllNumbers(2, 3, "three");     //Tira Error  
+
 
 // -- Narrowing
 function suma2 ( a:number | string, b:number | string): number {
@@ -67,3 +83,4 @@ function unirObjetos <U extends object , V extends object> (obj1: U, obj2: V): U
 
 unirObjetos({nombre: "Mauricio"}, {edad: 27}); //Esto esta ok pq le decimos que si o si recibimos un objeto
 // unirObjetos({nombre: "Mauricio"} , 27) // Esto tira Error
+

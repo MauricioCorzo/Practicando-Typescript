@@ -1,3 +1,4 @@
+export {};
 // Interfaces de la que extiende las clases
 
 interface Persona {

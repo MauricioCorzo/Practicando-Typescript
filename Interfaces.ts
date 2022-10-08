@@ -12,7 +12,7 @@ interface Hobby {
     nombre: string
 }
 // Ok
-const mauricio2: Persona = {
+const mauricio: Persona = {
 	nombre: "Mauricio",
 	apellido: "Corzo",
 	edad: 27,
