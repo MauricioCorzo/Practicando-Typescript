@@ -14,7 +14,7 @@ enum Fases {
 }
 
 // const nullExample:null  = null; // Solo puede tomar valor "null".
-const numberExample: number = null; // Pero el valor null se le puede asignar a cualquier variable con la configuracion en tsconfig en false
+const numberExample: number = null; // Pero el valor null se le puede asignar a cualquier variable con la configuracion en tsconfig en false;
 
 // El mismo ejemplo aplica para undefined
 // const undefinedExample: undefined = undefined;
