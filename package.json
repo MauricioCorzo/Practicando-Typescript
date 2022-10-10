@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.ts"
+    "dev": "nodemon index.ts",
+    "ts-node": "ts-node index.ts",
+    "tsc": "tsc"
+
   },
   "keywords": [],
   "author": "",
