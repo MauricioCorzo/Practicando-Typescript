@@ -44,6 +44,7 @@ type TuplaOpcional = [boolean, string, number?]
 
 const tuplaOpcional: TuplaOpcional = [false, "Gino"]; // Etso esta OK
 
+const hola = "holaaa";
 
 type BooleanRecord = { [k: string]: boolean };
 
