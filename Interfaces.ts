@@ -1,4 +1,4 @@
-//INTERFACES Y OBJETOS
+//INTERFACES Y OBJETOS.
 
 interface Persona {
     readonly nombre: string, //Sirve solo para lectura. No se puede modificar, FUnciona para type y class tmb
