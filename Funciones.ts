@@ -82,3 +82,13 @@ function unirObjetos<U extends object, V extends object>(obj1: U, obj2: V): U & 
 
 unirObjetos({ nombre: 'Mauricio' }, { edad: 27 }); //Esto esta ok pq le decimos que si o si recibimos un objeto
 // unirObjetos({nombre: "Mauricio"} , 27) // Esto tira Error
+
+function divide(a: number, b: number, { round_to_int }: { round_to_int: boolean }) {
+    const result = a / b;
+    if (!round_to_int) {
+        return result;
+    }
+    return Math.round(result);
+}
+
+divide(1, 6, { round_to_int: true });
