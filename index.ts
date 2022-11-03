@@ -4,6 +4,9 @@
 // cambiar en package.json el script para correr nodemon
 // npm init -D @eslint/config
 // "@typescript-eslint/no-unused-vars": "off"
+
+//git reset --hard origin/master
+
 import categorias from './categorias';
 const numero = 29;
 
