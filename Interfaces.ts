@@ -1,4 +1,4 @@
-//INTERFACES Y OBJETOS
+//INTERFACES Y OBJETOS.
 
 interface Persona {
     readonly nombre: string; //Sirve solo para lectura. No se puede modificar, FUnciona para type y class tmb
@@ -94,4 +94,6 @@ type valores = ValueOf<User>;
 
 // type valores = User[keyof User] // Se puese hacer tmb type ValueOf<Obj> = Obj[keyof Obj] .... type valores = ValueOf<User>
 
+
 const holaa2: valores = 'free'; // Este si acepta los values de las keys de user
+
