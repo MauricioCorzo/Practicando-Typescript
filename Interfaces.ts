@@ -94,6 +94,4 @@ type valores = ValueOf<User>;
 
 // type valores = User[keyof User] // Se puese hacer tmb type ValueOf<Obj> = Obj[keyof Obj] .... type valores = ValueOf<User>
 
-
 const holaa2: valores = 'free'; // Este si acepta los values de las keys de user
-

@@ -11,7 +11,7 @@ const result = stringZod.parse('Mauricio');
 console.log(result);
 
 const UserSchema = z.object({
-    email: z.string().email(),
+    email: z.string().email('No es un email valido'),
     fullname: z.string(),
     phone: z.number(),
 });
@@ -19,7 +19,7 @@ const UserSchema = z.object({
 type UserObject = z.infer<typeof UserSchema>;
 
 const User: UserObject = {
-    email: 'correo@correo.com',
+    email: 'correo@correo',
     fullname: 'Mauricio',
     phone: 12345678,
 };
